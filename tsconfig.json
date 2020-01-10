@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-medium": [
+        "dist/ng-medium"
+      ],
+      "ng-medium/*": [
+        "dist/ng-medium/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
