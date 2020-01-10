@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
-import { NgMediumComponent } from './ng-medium.component';
-
-
+import { NgModule } from "@angular/core";
+import { NgMediumFeedComponent } from "./components/ng-medium-feed.component";
 
 @NgModule({
-  declarations: [NgMediumComponent],
-  imports: [
-  ],
-  exports: [NgMediumComponent]
+  declarations: [NgMediumFeedComponent],
+  imports: [],
+  exports: [NgMediumFeedComponent]
 })
-export class NgMediumModule { }
+export class NgMediumModule {}
