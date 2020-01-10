@@ -11,9 +11,7 @@ import { RssToJsonWrapperService } from "../services/rss-to-json-wrapper.service
   styles: []
 })
 export class NgMediumFeedComponent implements OnInit {
-  constructor(private providerService: RssToJsonWrapperService) {
-    providerService.load("");
-  }
+  constructor() {}
 
   ngOnInit() {}
 }
