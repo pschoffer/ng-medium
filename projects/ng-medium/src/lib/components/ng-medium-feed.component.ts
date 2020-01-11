@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { RssToJsonWrapperService } from "../services/rss-to-json-wrapper.service";
+import { NgMediumService } from "../services/ng-medium.service";
 
 @Component({
   selector: "ng-medium-feed",
@@ -11,7 +11,12 @@ import { RssToJsonWrapperService } from "../services/rss-to-json-wrapper.service
   styles: []
 })
 export class NgMediumFeedComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    // service.fetchFeed("https://medium.com/feed/angular-in-depth").then(
+    //   res => console.log(res),
+    //   err => console.log(err)
+    // );
+  }
 
   ngOnInit() {}
 }
