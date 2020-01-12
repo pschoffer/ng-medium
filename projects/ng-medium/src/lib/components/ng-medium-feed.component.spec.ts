@@ -26,8 +26,6 @@ describe("NgMediumFeedComponent", () => {
       providers: [{ provide: NgMediumService, useValue: ngMediumServiceMock }]
     }).compileComponents();
 
-    ngMediumServiceMock.fetchFeed.and.returnValue(Promise.resolve(null));
-
     fixture = TestBed.createComponent(NgMediumFeedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -37,7 +35,7 @@ describe("NgMediumFeedComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  describe("Service Interaction", () => {
+  describe("Feed fetching", () => {
     it("should emit error on error", done => {
       const errorToBeReturned = new Error("Maaan! Get your stuff together.");
       ngMediumServiceMock.fetchFeed.and.returnValue(
@@ -49,7 +47,7 @@ describe("NgMediumFeedComponent", () => {
         done();
       });
 
-      component.ngOnInit();
+      component.feedUrl = "";
     });
 
     it("should set Feed on sucess", fakeAsync(() => {
@@ -58,7 +56,7 @@ describe("NgMediumFeedComponent", () => {
         Promise.resolve(returnedFeed)
       );
 
-      component.ngOnInit();
+      component.feedUrl = "";
       tick();
 
       expect(component.feed).toBe(returnedFeed);

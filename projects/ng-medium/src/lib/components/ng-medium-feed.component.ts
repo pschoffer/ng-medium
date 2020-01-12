@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter, Input } from "@angular/core";
 import { NgMediumService } from "../services/ng-medium.service";
 import { Feed } from "../models/feed";
 
@@ -7,16 +7,20 @@ import { Feed } from "../models/feed";
   templateUrl: "./ng-medium-feed.component.html",
   styles: []
 })
-export class NgMediumFeedComponent implements OnInit {
+export class NgMediumFeedComponent {
   @Output()
   errorStream = new EventEmitter<Error>();
+  @Input()
+  set feedUrl(feedUrl: string) {
+    this.fetchFeed(feedUrl);
+  }
 
   feed: Feed;
 
   constructor(private service: NgMediumService) {}
 
-  ngOnInit() {
-    this.service.fetchFeed("https://medium.com/feed/angular-in-depth").then(
+  private fetchFeed(url: string): void {
+    this.service.fetchFeed(url).then(
       res => (this.feed = res),
       err => this.errorStream.emit(err)
     );
