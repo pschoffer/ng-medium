@@ -1,5 +1,10 @@
 <div class="container">
   <h1>Medium Feed Demo</h1>
-  <p>We are fetching https://medium.com/feed/angular-in-depth</p>
-  <ng-medium-feed></ng-medium-feed>
+  <label>Paste the Feed URL: </label>
+  <input #feedInput type="text" [value]="feedUrl" />
+  <button type="submit" (click)="updateFeed()">Update Feed</button>
+  <p>
+    Fetching <b>{{ feedUrl }}</b>
+  </p>
+  <ng-medium-feed [feedUrl]="feedUrl"></ng-medium-feed>
 </div>

@@ -2,3 +2,11 @@
   margin: auto;
   width: 70%;
 }
+
+input {
+  width: 30em;
+}
+
+button {
+  cursor: pointer;
+}
