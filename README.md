@@ -12,7 +12,7 @@ npm install ng-medium
 
 ## Use Example:
 
-Add the declaration to your @NgModule:
+Add new import to your `@NgModule`:
 
 ```typescript
 import {NgMediumModule} from 'ng-medium';
@@ -26,7 +26,7 @@ import {NgMediumModule} from 'ng-medium';
 })
 ```
 
-Use directly inside your HTML templates by adding the tag 'autosize' to any textarea.
+Use directly inside your HTML templates by adding the tag 'ng-medium-feed'.
 
 ```html
 <ng-medium-feed
