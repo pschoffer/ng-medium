@@ -1,6 +1,6 @@
 # NgMedium
 
-[![npm version](https://badge.fury.io/js/ng-medium.svg)](https://badge.fury.io/js/ng-medium)
+<span class="badge-npmversion"><a href="https://npmjs.org/package/ng-medium" title="View this project on NPM"><img src="https://img.shields.io/npm/v/ng-medium.svg?color=green" alt="NPM version" /></a></span>
 
 Angular component to show articles form Medium blog feed. This is useful in case you would like to embed your stories in your website.
 
