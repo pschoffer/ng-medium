@@ -38,7 +38,7 @@ Use directly inside your HTML templates by adding the tag 'autosize' to any text
 
 The whole purpose of this project is to get the feed look native in your website. This means there needs to be a way to provide whatever styling you want. For this purpose there is `styles` input on the component.
 
-The input accepts an object of [NgMediumStyles](https://github.com/pschoffer/ng-medium/blob/master/projects/ng-medium/src/lib/models/styles.ts).
+The input accepts an object of [NgMediumStyles](https://github.com/pschoffer/ng-medium/blob/master/projects/ng-medium/src/lib/models/ngMediumStyles.ts).
 
 ```html
 <ng-medium-feed
