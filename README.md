@@ -74,7 +74,6 @@ The library is being packaged and sent to npm. Following steps are needed:
 
 ```bash
 npm run-script packLib
-cd dist/ng-medium
 npm login # unless you haven't done that
-npm publish
+npm run-script publishLib
 ```

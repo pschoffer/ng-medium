@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "packLib": "ng build ng-medium && cp README.md dist/ng-medium && cp LICENSE dist/ng-medium",
+    "publishLib": "npm publish dist/ng-medium",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
