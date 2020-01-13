@@ -26,7 +26,7 @@ import {NgMediumModule} from 'ng-medium';
 })
 ```
 
-Use directly inside your HTML templates by adding the tag 'ng-medium-feed'.
+Use directly inside your HTML templates by adding the tag `ng-medium-feed`.
 
 ```html
 <ng-medium-feed
