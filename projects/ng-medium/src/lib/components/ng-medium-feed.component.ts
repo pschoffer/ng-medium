@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, Input } from "@angular/core";
 import { NgMediumService } from "../services/ng-medium.service";
 import { Feed } from "../models/feed";
-import { NgMediumStyles } from "../models/styles";
+import { NgMediumStyles } from "../models/ngMediumStyles";
 
 @Component({
   selector: "ng-medium-feed",
