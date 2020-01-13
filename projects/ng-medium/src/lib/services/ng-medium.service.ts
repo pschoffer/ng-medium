@@ -22,8 +22,9 @@ export class NgMediumService {
   }
   private mapResponse(input: MediumFeed): Feed {
     const feed: Feed = input.feed;
-    feed.items = input.items;
-
+    if (feed) {
+      feed.items = input.items;
+    }
     return feed;
   }
 }

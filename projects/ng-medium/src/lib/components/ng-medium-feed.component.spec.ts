@@ -78,5 +78,20 @@ describe("NgMediumFeedComponent", () => {
       expect(titleDe).toBeTruthy();
       expect(titleDe.nativeElement.innerText).toBe(title);
     });
+
+    it("should have items", () => {
+      component.feed = {
+        title,
+        description,
+        items: [{ title: "item1" }, { title: "item2" }]
+      };
+      fixture.detectChanges();
+
+      const itemContainerDes = fixture.debugElement.queryAll(
+        By.css(".ng-medium-item-container")
+      );
+
+      expect(itemContainerDes.length).toBe(component.feed.items.length);
+    });
   });
 });

@@ -1,3 +1,17 @@
-<div *ngIf="feed">
-  <div class="ng-medium-feed-title">{{ feed.title }}</div>
+<div *ngIf="feed" [ngStyle]="styles.feedContainer">
+  <div class="ng-medium-feed-title" [ngStyle]="styles.feedTitle">
+    {{ feed.title }}
+  </div>
+  <div [ngStyle]="styles.allItemsContainer">
+    <div
+      class="ng-medium-item-container"
+      *ngFor="let item of feed.items"
+      [ngStyle]="styles.itemContainer"
+    >
+      <span [ngStyle]="styles.itemThumbnailContainer">
+        <img [src]="item.thumbnail" [ngStyle]="styles.itemThumbnail" />
+      </span>
+      <span [ngStyle]="styles.itemTitle">{{ item.title }}</span>
+    </div>
+  </div>
 </div>
